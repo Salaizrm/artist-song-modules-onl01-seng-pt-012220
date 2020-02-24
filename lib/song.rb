@@ -20,5 +20,10 @@ class Song
   def artist=(artist)
     @artist = artist
   end
+  
+  def self.find_by_name(name)
+    self.detect {|a| a.name == name}
+  end
+
 
 end
