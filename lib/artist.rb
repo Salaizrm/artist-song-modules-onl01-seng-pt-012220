@@ -27,5 +27,9 @@ class Artist
   def add_songs(songs)
     songs.each { |song| add_song(song) }
   end
+  def find_by_name(name)
+    self.detect {|a| a.name == name}
+  end
+
 
 end
